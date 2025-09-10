@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+    background-color: #f1f1f1;
+    color: gray;
+    /*height: 100vh;*/
+    /*overflow: auto;*/
+    line-height: 1.5;
+}
+
+/*CONTAINER CLASS*/
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: clip;
+    overflow-clip-margin: 42rem;
+}
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    z-index: 900;
+}
+
+/*Navigation and links to different pages*/
+nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    bottom: 1rem;
+    left: -1rem;
+}
+
+nav a {
+    font-size: 1rem;
+    letter-spacing: 0.04rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:hover {
+  color: #0e74aa;
+}
+
+/*- Code for glow around name------------------------------------------------------------------*/
+.name {
+    font-family:"Monsieur La Doulaise";
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    position: relative;
+    left: 1rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+    line-height: 150;
+}
+.name::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -3px -3px -3px -3px;
+    border-radius: 100px;
+    background: linear-gradient(to right, #4ea8c1, #0590f4, #005bdc, #07b2ff);
+    background-size: 200% 200%;
+    animation: animationGradient 60s linear infinite;
+    box-shadow: 0 0 15px #38ddf3;
+    /*    inset: 0; !* no need for -3px if we compensate in shadow *!*/
+    /*    filter: drop-shadow(0 0 15px #38ddf3);*/
+}
+
+/* For Animation */
+@keyframes animationGradient {
+  to{
+    background-position: 200%;
+  }
+}
+
+/*-----------------------------------------------------*/
+.icons{
+    position: absolute;
+    width: 5rem;
+}
+
+#linkedin-icon{
+    left:54rem;
+    top: 9.5rem;
+}
+#outlook-icon{
+    left:54rem;
+    top: 17.5rem;
+}
+
+#gmail-icon{
+    left:54rem;
+    top:24.5rem;
+}
+
+#github-icon{
+    width: 7.5rem;
+    left:53rem;
+    top:30.5rem;
+}
+
+#github-icon:hover,
+#linkedin-icon:hover,
+#outlook-icon:hover,
+#gmail-icon:hover{
+    transform: translate(3px, -8px);/* X, Y */
+    filter: drop-shadow(1px 1px 45px #38ddf3);
+    /*box-shadow: 0 20px 40px #38ddf3;*/
+    cursor: pointer;}
+/*----------------------------------------------------------*/
+.contact-form {
+    position: absolute;
+    left: 61rem;
+    width: 30rem;
+    max-width: 35rem;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    padding: 25px;
+    /*background: #d0d7dc;*/
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #0961b1;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #033976;
+}
+/*-------------------------------------------*/
+/*SAYING HELLO*/
+.statement p{
+    position: absolute;
+    left: 2.5rem;
+    top: 9.5rem;
+    max-width: 22%;
+    text-align: justify;
+    /*display: grid; !*used to center text*!*/
+    /*place-items: center;*/
+}
+.statement h2,
+.statement h3 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-lr;
+    color: #4ed0f5;
+    letter-spacing: 8px;
+    line-height: 1.2;
+    cursor: pointer;
+}
+.statement h2{
+    font-size: 280px;
+    left: 19.05rem;
+    top: 7.3rem;
+    display:inline-block;
+    transform:rotate(180deg);
+    transform-origin:center;
+}
+.statement h3{
+    font-size: 245px;
+    left: 43rem;
+    top: 30.1rem;
+}
+
+.statement h2::before,
+.statement h3::before {
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent 0,
+    transparent 2px,
+    #000000 2px,
+    #000000 4px
+  );
+    top:0;
+    left:0;
+  -webkit-background-clip: text;
+  z-index: -1;
+  transition: 1s;
+}
+.statement h2::before {
+    content: "Say";
+}
+.statement h3:before{
+    content: "Hello!";
+}
+
+.statement h2::after,
+.statement h3::after {
+  position: absolute;
+  color: transparent;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 2px,
+    #0961b1 2px,
+    #0961b1 4px
+  );
+  -webkit-background-clip: text;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+
+.statement h2::after{
+    content: "Say";
+}
+.statement h3::after{
+    content:"Hello!";
+}
+
+/*.statement h2::after {*/
+/*  content: "Say Hello!";*/
+/*  position: absolute;*/
+/*  color: transparent;*/
+/*  background-image: repeating-linear-gradient(*/
+/*    135deg,*/
+/*    transparent 0,*/
+/*    transparent 2px,*/
+/*    white 2px,*/
+/*    white 4px*/
+/*  );*/
+/*  -webkit-background-clip: text;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  transition: 1s;*/
+/*}*/
+
+/*.statement h2:hover:before {*/
+/*  top: 10px;*/
+/*  left: 10px;*/
+/*}*/
+
+.statement h2:hover:before,
+.statement h3:hover:before{
+  top: 10px;
+  left: 10px;
+}
+/*.statement h2:hover:after {*/
+/*  top: -10px;*/
+/*  left: -10px;*/
+/*}*/
+.statement h2:hover:after,
+.statement h3:hover:after{
+  top: -10px;
+  left: -10px;
+}
+
