@@ -23,7 +23,7 @@ document.head.appendChild(styleTag);
 
 // 2. Animate the letters (no URL check)
 document.addEventListener("DOMContentLoaded", () => {
-  const nameElement = document.querySelector(".name");
+  const nameElement = document.querySelector(".name-1");
   if (!nameElement) return;
 
   const text = nameElement.textContent;
