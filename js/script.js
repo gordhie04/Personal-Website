@@ -13,39 +13,30 @@ const [color1, color2, color3] = getRandomColorSet();
 const styleTag = document.createElement("style");
 styleTag.textContent = `
   @keyframes strokeColor {
-    0% {
-      opacity: 0;
-      -webkit-text-stroke: 1px gray;
-    }
-    50% {
-      opacity: 1;
-      -webkit-text-stroke: 1px ${color1};
-    }
-    75% {
-      -webkit-text-stroke: 1px ${color2};
-    }
-    100% {
-      -webkit-text-stroke: 1px ${color3};
-    }
+    0%   { opacity: 0; -webkit-text-stroke: 1px gray; }
+    50%  { opacity: 1; -webkit-text-stroke: 1px ${color1}; }
+    75%  { -webkit-text-stroke: 1px ${color2}; }
+    100% { -webkit-text-stroke: 1px ${color3}; }
   }
 `;
 document.head.appendChild(styleTag);
 
-// 2. Animate the letters
-if (window.location.pathname.endsWith("index.html")) {
-    const nameElement = document.querySelector(".name");
-    const text = nameElement.textContent;
-    nameElement.innerHTML = "";
+// 2. Animate the letters (no URL check)
+document.addEventListener("DOMContentLoaded", () => {
+  const nameElement = document.querySelector(".name");
+  if (!nameElement) return;
 
-    [...text].forEach((char, i) => {
-        const span = document.createElement("span");
-        span.textContent = char;
-        span.style.animation = `strokeColor 1.5s ease forwards`;
-        span.style.animationDelay = `${i * 0.15}s`;
-        nameElement.appendChild(span);
-    });
-}
+  const text = nameElement.textContent;
+  nameElement.innerHTML = "";
 
+  [...text].forEach((char, i) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.animation = "strokeColor 1.5s ease forwards";
+    span.style.animationDelay = `${i * 0.15}s`;
+    nameElement.appendChild(span);
+  });
+});
 
   // script for individual text highlight in the Introduction section when I put my pointer on it
 window.addEventListener("DOMContentLoaded", () => {
