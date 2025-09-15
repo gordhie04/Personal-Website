@@ -5,23 +5,20 @@
 }
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f1f1f1;
     color: gray;
     line-height: 1.5;
 }
 
-/*CONTAINER CLASS*/
 .container{
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
     overflow-y: clip;
-    /*overflow-clip-margin: 10rem;*/
 }
 
-/*HEADER*/
 header{
     display: flex;
     justify-content: space-between;
@@ -30,7 +27,6 @@ header{
     z-index: 900;
 }
 
-/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -54,19 +50,16 @@ nav a:hover {
   color: #0e74aa;
 }
 
-/*- Code for glow around name------------------------------------------------------------------*/
 .name {
     font-family:"Monsieur La Doulaise";
     font-size: 2.2rem;
     font-weight: 700;
-
     position: relative;
     left: 1rem;
     width: 80%;
     max-width: 7rem;
     height: 7rem;
     border-radius: 100px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,26 +78,13 @@ nav a:hover {
     box-shadow: 0 0 15px #38ddf3;
 }
 
-/* For Animation */
 @keyframes animationGradient {
   to{
     background-position: 200%;
   }
 }
-/*-------Grid edits-------------------------*/
-
-/*---Intro Statement-----------------------------------*/
 
 
-/*-----------------------------------------------------*/
-
-
-
-/*----------------------------------------------------------*/
-
-/*-------------------------------------------*/
-/*----hoping to be official say hello*/
-/*SAYING HELLO*/
 .main-content{
     display: grid;
     /*border: 2px solid black;*/
@@ -116,10 +96,8 @@ nav a:hover {
     width: auto;
 }
 
-/*testing*/
-/* Make the greeting area a grid and place it inside the main grid */
+
 .intro{
-    /*width: 20rem;*/
     grid-area: intro;
     max-width: 100%;
     text-align: left;
@@ -140,7 +118,6 @@ nav a:hover {
     justify-content: center;
     justify-items: center;
     margin-top: 2rem;
-    /*gap: 2rem;*/
 }
 .icons img{
     width: 5rem;
@@ -150,7 +127,6 @@ nav a:hover {
     transform: translate(3px, -8px);
     filter: drop-shadow(1px 1px 45px #38ddf3);
     cursor: pointer;}
-
 .say{
     grid-area: say;
 }
@@ -159,7 +135,6 @@ nav a:hover {
     position: relative;
     top: 15px;
     right: 32px;
-    /*margin-top: 10rem;*/
 }
 .icons{
     grid-area: icons;
@@ -213,7 +188,6 @@ nav a:hover {
   background-color: #033976;
 }
 
-/* Shared styles for both words */
 .greeting h2{
     position: relative;
     writing-mode: vertical-lr;
@@ -227,7 +201,6 @@ nav a:hover {
     min-width: 0;
 }
 
-/* Size and flip like your statement version */
 .greeting .say {
     font-size: 280px;
     transform: rotate(180deg);
@@ -238,7 +211,6 @@ nav a:hover {
     font-size: 245px;
 }
 
-    /* Put the striped layers on the HEADINGS themselves (not the container) */
 .greeting h2::before
 {
     position: absolute;
@@ -255,7 +227,7 @@ nav a:hover {
     left: 0;
     z-index: -1;
     transition: 1s;
-    content: attr(data-text-before); /* will fall back to hard-coded content below */
+    content: attr(data-text-before); 
 }
 
 .greeting h2::after{
@@ -272,10 +244,9 @@ nav a:hover {
     top: 0;
     left: 0;
     transition: 1s;
-    content: attr(data-text-after);  /* will fall back to hard-coded content below */
+    content: attr(data-text-after);  
 }
 
-    /* Provide explicit content (so you don't need data-* attributes) */
 .greeting .say::before,
 .greeting .say::after{
     content: "Say";
