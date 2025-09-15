@@ -5,14 +5,13 @@
 }
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
     color: #808080FF;
     height: 115rem;
     max-height: 150rem;
     line-height: 1.5;
 }
 
-/*CONTAINER CLASS*/
 .container{
     width: 100%;
     margin: 0 auto;
@@ -22,7 +21,6 @@ body{
     z-index: 300;
 }
 
-/*HEADER*/
 header{
     display: flex;
     justify-content: space-between;
@@ -32,7 +30,6 @@ header{
 }
 
 
-/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +53,6 @@ nav a:hover {
   color: #e41364;
 }
 
-/*- Code for glow around name------------------------------------------------------------------*/
 .name {
     font-family:"Monsieur La Doulaise";
     font-size: 2.2rem;
@@ -87,7 +83,6 @@ nav a:hover {
     animation: animationGradient 60s linear infinite;
     box-shadow: 0 0 15px #c30fa1;
 }
-/* For Animation */
 @keyframes animationGradient {
   to{
     background-position: 200%;
@@ -95,12 +90,11 @@ nav a:hover {
 }
 
 
-/* Shared styles for all cards */
 .card-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);  
     grid-template-rows: repeat(3, auto);
-    gap: 3rem;                              /* Space between cards */
+    gap: 3rem;                        
     max-width: 81%;
     margin: 2rem auto;
     padding: 2rem;
@@ -126,7 +120,7 @@ nav a:hover {
     position: absolute;
     color: #673442;
     font-size: 1.7rem;
-    font-family: "Rasa", serif; /*"Roboto Condensed", sans-serif;"Rasa", serif; "Inter"; "Nanum Myeongjo", serif; "Instrument Serif", serif;*/
+    font-family: "Rasa", serif; 
     top: 17rem;
     left: 0.5rem;
 }
@@ -204,7 +198,6 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*border-bottom: 2px solid #b12562;*/
 }
 
 .modal p{
@@ -323,14 +316,13 @@ nav a:hover {
 
 .text-container h2{
     font-size: 1.15rem;
-    margin: 0.8rem 0 0 0.5rem;/* top, left, bottom right*/
+    margin: 0.8rem 0 0 0.5rem;
 }
 .text-container span{
     font-size: 1rem;
     text-decoration: none;
 }
 
-/*This is for skill rating - personal opinion*/
 .inline-img {
   height: 18px;
   width: auto;
