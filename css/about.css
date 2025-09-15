@@ -5,14 +5,13 @@
 }
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f1f1f1;
     color: gray;
     min-height: 100vh;
     line-height: 1.5;
 }
 
-/*CONTAINER CLASS*/
 .container{
     width: 100%;
     margin: 0 auto;
@@ -21,7 +20,6 @@ body{
     overflow: visible;
 }
 
-/*HEADER*/
 header{
     display: flex;
     justify-content: space-between;
@@ -30,7 +28,6 @@ header{
     z-index: 999;
 }
 
-/*NAVIGATION (LINKS)*/
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +51,6 @@ nav a:hover {
   color: rebeccapurple;
 }
 
-/*- CODE FOR NAME GLOW------------------------------------------------------------------*/
 .name {
     font-family:"Monsieur La Doulaise";
     font-size: 2.2rem;
@@ -85,55 +81,12 @@ nav a:hover {
     animation: animationGradient 60s linear infinite;
     box-shadow: 0 0 15px #a00af6;
 }
-/* For Animation */
+
 @keyframes animationGradient {
   to{
     background-position: 200%;
   }
 }
-
-
-/*ADDING A TOGGLE MENU - ALL RESPECTIVE CODE*/
-/*.menu-toggle {*/
-/*  display: none;*/
-/*  flex-direction: column;*/
-/*  gap: 5px;*/
-/*  cursor: pointer;*/
-/*  width: 25px;*/
-/*  height: 20px;*/
-/*  justify-content: center;*/
-/*  z-index: 1001;*/
-/*}*/
-/*.menu-toggle span {*/
-/*  height: 3px;*/
-/*  background: gray;*/
-/*  border-radius: 2px;*/
-/*}*/
-/*.nav-links {*/
-/*  display: flex;*/
-/*  gap: 1.5rem;*/
-/*}*/
-/*@media (max-width: 768px) {*/
-/*  .menu-toggle {*/
-/*    display: flex;*/
-/*  }*/
-/*  .nav-links {*/
-/*    display: none;*/
-/*    flex-direction: column;*/
-/*    position: absolute;*/
-/*    top: 60px;*/
-/*    right: 20px;*/
-/*    background-color: #000;*/
-/*    padding: 1rem;*/
-/*    border: 1px solid #444;*/
-/*  }*/
-/*  .nav-links.show {*/
-/*    display: flex;*/
-/*  }*/
-/*}*/
-
-
-
 
 
 
