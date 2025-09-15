@@ -2,20 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*overflow: clip;*/
-    /*overflow-clip-margin: 100rem;*/
 }
 
 body{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
   background-color: #f1f1f1;
   color: gray;
   min-height: 100vh;
   line-height: 1.5;
 }
 
-
-/*CONTAINER CLASS*/
 .container{
   width: 100%;
   margin: 0 auto;
@@ -24,7 +20,6 @@ body{
   overflow: hidden;
 }
 
-/*HEADER*/
 header{
     position: relative;
   display: flex;
@@ -37,20 +32,18 @@ header{
 .name-1 {
   display: flex;
   gap: 0.2rem;
-  font-family: "Mea Culpa", cursive; /* or your preferred font */
-  /*font-family:"Monsieur La Doulaise";*/
+  font-family: "Mea Culpa", cursive;
   font-size: 3.5rem;
   font-weight: 500;
 }
 
 .name-1 span {
   color: transparent;
-  -webkit-text-stroke: 1px gray; /* fallback before JS loads keyframes */
+  -webkit-text-stroke: 1px gray; 
   opacity: 0;
   animation-fill-mode: forwards;
 }
 
-/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -89,16 +82,6 @@ nav a:hover {
     width: 98%;
 }
 
-/*STYLING GRADIENT IMAGE */
-/*.image-gradient{*/
-/*    position: absolute;*/
-/*    top: 6rem;*/
-/*    left: -1rem;*/
-/*    !*opacity: 0.5;*!*/
-/*    filter: brightness(0%);*/
-/*    z-index: -1;*/
-/*}*/
-
 .image-gradient{
     position: absolute;
     top: 0;
@@ -110,7 +93,6 @@ nav a:hover {
     z-index: -1;
 }
 
-/*Intro CONTENT*/
 .intro{
     grid-area: intro;
     width: 80%;
@@ -122,7 +104,6 @@ nav a:hover {
 
 }
 
-/*This is for some basic alignment. and the intro-text is for individual word selection*/
 .intro p{
     padding-top: 5px;
     text-align: left;
@@ -152,7 +133,7 @@ nav a:hover {
     margin-left: 20rem;
 
 }
-/*Effect for scream*/
+
 .pozycja{
     position: relative;
     display: flex;
@@ -171,7 +152,6 @@ span{display:block}
     position: relative;
     width:200px;
     height:280px;
-    /*margin: -50px 50px 0 0; !* top right bottom left - moves it up and right *!*/
 
     margin:0 auto;
     transform: scale(2.5);
@@ -319,7 +299,6 @@ span{display:block}
 50%{-webkit-transform:rotateZ(-2deg);transform:rotateZ(-2deg)}
 }
 
-/* If your shadow (.cien) is not inside #qlogo, scale it too */
 .cien {
   transform: scale(1.4);
   transform-origin: center top;
