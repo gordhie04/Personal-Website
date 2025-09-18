@@ -5,13 +5,15 @@
 }
 
 body{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
   background-color: #f1f1f1;
   color: gray;
   min-height: 100vh;
   line-height: 1.5;
 }
 
+
+/*CONTAINER CLASS*/
 .container{
   width: 100%;
   margin: 0 auto;
@@ -20,6 +22,7 @@ body{
   overflow: hidden;
 }
 
+/*HEADER*/
 header{
     position: relative;
   display: flex;
@@ -32,18 +35,20 @@ header{
 .name-1 {
   display: flex;
   gap: 0.2rem;
-  font-family: "Mea Culpa", cursive;
+  font-family: "Mea Culpa", cursive; /* or your preferred font */
+  /*font-family:"Monsieur La Doulaise";*/
   font-size: 3.5rem;
   font-weight: 500;
 }
 
 .name-1 span {
   color: transparent;
-  -webkit-text-stroke: 1px gray; 
+  -webkit-text-stroke: 1px gray; /* fallback before JS loads keyframes */
   opacity: 0;
   animation-fill-mode: forwards;
 }
 
+/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: nowrap;
@@ -70,7 +75,24 @@ nav a {
 nav a:hover {
   color: #222222;
 }
+/*sidebar edits -----------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0;
+    overflow-x: hidden;
+}
 
+
+.hamburger-icon {
+    display: none !important; /* Force hide on desktop */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #808080FF;
+}
+
+/*=========================*/
 .main-content{
     position: relative;
     display: grid;
@@ -84,6 +106,8 @@ nav a:hover {
     width: 98%;
 }
 
+
+
 .image-gradient{
     position: absolute;
     top: 0;
@@ -95,6 +119,7 @@ nav a:hover {
     z-index: -1;
 }
 
+/*Intro CONTENT*/
 .intro{
     grid-area: intro;
     width: 80%;
@@ -106,6 +131,7 @@ nav a:hover {
 
 }
 
+/*This is for some basic alignment. and the intro-text is for individual word selection*/
 .intro p{
     padding-top: 5px;
     text-align: left;
@@ -127,7 +153,7 @@ nav a:hover {
 }
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .main-content {
         grid-template-columns: 1fr;
         grid-template-rows: 20rem 1fr;
@@ -144,5 +170,54 @@ nav a:hover {
     .image-gradient{
     width: 100%;
     height: 100%;
+    }
+
+
+    /*Sidebar ------ for shrink edits*/
+    nav{
+    display: none;
+    }
+
+    .hamburger-icon {
+        display: block !important;
+        font-size: 2rem;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        right: 0;
+        background-color: #202325;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .sidenav a {
+        padding: 15px 8px 15px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #ccc;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #000000;
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        padding: 20px;
     }
 }
