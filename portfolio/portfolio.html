@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PORTFOLIO</title>
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <!--Font style for h1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=Nanum+Myeongjo&family=Rasa:ital,wght@0,300..700;1,300..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1 class="name">GH</h1>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <!-- Add hamburger icon that only shows on mobile -->
+        <div class="hamburger-icon" onclick="openNav()">&#9776;</div>
+    </header>
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="portfolio.html">PORTFOLIO</a>
+    <a href="contact.html">CONTACT</a>
+    <!-- Remove the nav wrapper and "open" span from here -->
+</div>
+
+
+
+<div id="main">
+    <div class="card-container">
+        <div data-modal-target="#modal-edu" class="card card-1">
+            <h3>Education</h3>
+            <p>Schools and institutions I’ve attended, along with major academic milestones.</p> <!-- optional subtext -->
+        </div>
+        <div data-modal-target="#modal-skill" class="card card-2">
+            <h3>Skills</h3>
+            <p>Key technical and interpersonal skills developed through coursework, projects, and professional experiences.</p>
+        </div>
+        <div data-modal-target="#modal-exp" class="card card-3">
+            <h3>Experience</h3>
+            <p>Professional and research volunteer roles that shaped my growth.</p>
+        </div>
+        <div data-modal-target="#modal-proj" class="card card-4">
+            <h3>Projects</h3>
+            <p>Personal and academic projects demonstrating creativity and problem-solving.</p>
+        </div>
+        <div data-modal-target="#modal-activities" class="card card-5">
+            <h3>Activities</h3>
+            <p>Programs and organizations I've been involved in.</p>
+        </div>
+        <div data-modal-target="#modal-awards" class="card card-6">
+            <h3>Awards & Recognition</h3>
+            <p>Honors and achievements awarded for academic and professional excellence.</p>
+        </div>
+        <div data-modal-target="#modal-volunteering" class="card card-7">
+            <h3>Volunteering</h3>
+            <p>Community service and outreach efforts reflecting my values, initiative, and impact beyond academics.</p>
+        </div>
+        <div data-modal-target="#modal-coursework" class="card card-8">
+            <h3>Coursework</h3>
+            <p>College courses I’ve taken, organized by semester and focus area.</p>
+        </div>
+    </div>
+
+<!--    OVERLAY-->
+    <div id="overlay"></div>
+
+<!--    CARD 1-->
+    <div class="modal" id="modal-edu">
+        <div class="header">
+            <h1>
+              <a href="https://engineering.virginia.edu/bme" target="_blank" class="icon">
+                Education <span><ion-icon name="school"></ion-icon></span>
+              </a>
+            </h1>
+<!--            FOR THE CLOSE BUTTON-->
+            <button data-close-button class="cls-button">&times;</button>
+        </div>
+
+        <p>University of Virginia| Charlottesville,VA                       June 2022 – May 2026 (expected)
+Bachelor of Science in Biomedical Engineering
+        </p>
+    </div>
+
+<!--    CARD 2-->
+    <div class="modal" id="modal-skill">
+        <div class="header">
+            <h1> Skill </h1>
+            <button data-close-button class="cls-button">&times;</button>
+        </div>
+        <div class="text-container">
+            <h2>Programming & Scripting</h2>
+            <p>CSS <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>HTML 5 <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Matlab <img src="../img/3stars.png" alt="icon" class="inline-img"> </p>
+            <p>Python <img src="../img/4stars.png" alt="icon" class="inline-img"> </p>
+            <p>R <img src="../img/3stars.png" alt="icon" class="inline-img"> </p>
+
+            <h2>Programming Libraries</h2>
+            <p>Jupyter Notebook <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+            <p>Matlab/Seaborn <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+            <p>NumPy <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+            <p>Pandas <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+            <p>PyTorch <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+            <p>Scikit-learn <img src="../img/3stars.png" alt="icon" class="inline-img"></p>
+
+            <h2>Software</h2>
+            <p>Ansys <img src="../img/3stars.png" alt="icon" class="inline-img"> </p>
+            <p>Cell Profiler <img src="../img/4stars.png" alt="icon" class="inline-img"> </p>
+            <p>Fusion 360 <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Fiji [Image J] <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Google Sheets <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Google Slides <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Ilastik <img src="../img/4stars.png" alt="icon" class="inline-img"> </p>
+            <p>Microsoft Excel <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>Netflux <img src="../img/4stars.png" alt="icon" class="inline-img"> </p>
+            <p>PowerPoint<img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+            <p>SolidWorks <img src="../img/5stars.png" alt="icon" class="inline-img"> </p>
+        </div>
+    </div>
+
+
+<!--    CARD 3-->
+    <div class="modal" id="modal-exp">
+        <div class="header">
+            <h1> Experience </h1>
+            <button data-close-button class="cls-button">&times;</button>
+        </div>
+        <div class="text-container">
+            <h2>VitaliPatch</h2>
+            <p class="no-bullet"><b>Co-Founder</b> (PI: <a href="https://med.virginia.edu/plastic-surgery-and-oral-health/about/faculty/patrick-cottler-phd/" target="_blank">Patrick Cottler, Ph.D.</a>)</p>
+            <p class="no-bullet">January 2024 – Present</p>
+            <p>Co-developing an early stage wound care device to improve post-operative healing and infection prevention.</p>
+            <p>Led prototyping and feasibility testing; supported regulatory planning and IP evaluation.</p>
+            <p>Collaborated with engineers and clinicians on material choice, drug layering, and user-centered design.</p>
+            <p>Selected as a Finalist in the 2024 Johns Hopkins Healthcare Design Competition.</p>
+            <p>Currently part of the 2025 VentureWell cohort and the UVA VentureForward program.</p>
+
+            <h2>Men, Women, and People of Character, Honor, and Ambition — University of Virginia</h2>
+            <p class="no-bullet"><b>Administrative Assistant</b> (Advisor: <a href="https://www.linkedin.com/in/dr-joshua-epps/" target="_blank">Joshua Epps, Ph.D.</a>)</p>
+            <p class="no-bullet">August 2024 – Present | Charlottesville, VA</p>
+            <p>Assist with operational planning and execution of 10+ annual MOCHA/WOCHA/POCHA events, including
+orientation, speaker panels, leadership workshops, and service initiatives.</p>
+            <p>Oversee program documentation and scheduling for a cohort of 40+ students, supporting mentorship pipeline
+and leadership development.</p>
+            <p>Coordinate event logistics including venue booking, supply procurement, registration, and communication to
+ensure seamless program execution</p>
+            <p>Collaborate with staff and student leaders to strengthen outreach, participation, and the overall impact of UVA's
+character-based leadership programs.</p>
+
+            <h2><a href="https://engineering.virginia.edu/labs-groups/cardiac-systems-biology-group" target="_blank">Cardiac Systems Biology Group</a> — University of Virginia</h2>
+            <p class="no-bullet"><b>Undergraduate Researcher</b> (PI: <a href="https://engineering.virginia.edu/faculty/jeff-saucerman" target="_blank">Jeffery Saucerman, Ph.D.</a>)</p>
+            <p class="no-bullet"><span>October 2022 – Present</span> | Charlottesville, VA</p>
+            <p>Top engineering lab at UVA using Al to find new treatments for heart failure</p>
+            <p>Analyzing 200+ high-resolution immunofluorescence images to quantify cardiomyocytes and fibroblasts using
+markers including α-actinin, PDGFR, PCNA, and DAPI.</p>
+            <p>Built and applied machine learning–based segmentation pipelines using Ilastik (random forest classifier) and
+CellProfiler to identify and extract single-cell features from confocal images.</p>
+            <p>Preprocessed confocal microscopy datasets for batch segmentation, probability map generation, and
+quantitative feature extraction (e.g., cell count, co-localization, and intensity metrics).</p>
+            <p>Contributed to computational modeling of the Hippo signaling pathway using Netflux and Cytoscape, adjusting
+biological parameters to simulate gene expression and signaling dynamics.</p>
+            <p>Provided user feedback to improve accessibility of Netflux, including onboarding documentation and user
+interface clarity for new researchers.</p>
+
+            <h2><a href="https://engineering.virginia.edu/labs-groups/lampe-biomaterials-group" target="_blank">Lampe Biomaterials Group</a> — University of Virginia</h2>
+            <p class="no-bullet"><b>Undergraduate Researcher</b> (PI: <a href="https://engineering.virginia.edu/faculty/kyle-j-lampe" target="_blank">Kyle Lampe, Ph.D.</a>)</p>
+            <p class="no-bullet">August 2022 – August 2024 | Charlottesville, Virginia</p>
+            <p>Synthesized and optimized 5 distinct peptide hydrogels, including KYFIL, under varying experimental
+conditions to mimic brain tissue stiffness for targeted therapeutic treatments, such as stroke.</p>
+            <p>Cultured oligodendrocyte progenitor cells under sterile conditions to evaluate cell viability within the
+synthesized hydrogels.</p>
+            <p>Conducted rheological testing using an oscillatory rheometer to quantify hydrogel viscoelasticity and tune
+mechanical properties to match native brain ECM.</p>
+            <p>Performed image-based morphological analyses to validate hydrogel structure, porosity, and consistency
+across formulations using microscopy techniques.</p>
+
+            <h2>NY HomeOwner</h2>
+            <p class="no-bullet"><b>Real Estate Intern</b> (Advisor: Reza Ardebili)</p>
+            <p class="no-bullet">May 2024 – December 2024 | New York City, NY</p>
+            <p>Conducted in-depth property research and market analysis to help clients identify homes aligned with their
+needs and financial goals.</p>
+            <p>Managed client interactions with professionalism and clarity, presenting information in high-pressure situations
+and adapting to fast-changing priorities.</p>
+            <p>Gained hands-on experience in structuring real estate deals, assessing property value, and supporting
+negotiations in a competitive housing market.</p>
+            <p>Built strategic thinking and communication skills by supporting clients with diverse needs in a fast-paced urban
+real estate environment.</p>
+
+            <h2><a href="https://lab.vanderbilt.edu/mml/" target="_blank">Merryman Mechanobiology Laboratory</a> — Vanderbilt University</h2>
+            <p class="no-bullet"><b>Research Intern</b> (PI: <a href="https://engineering.vanderbilt.edu/bio/?pid=david-merryman" target="_blank">David Merryman, Ph.D.</a>)</p>
+            <p class="no-bullet">June 2023 – August 2023 | Nashville,TN</p>
+            <p>Contributed to parallel studies on heart valve disease: one on serotonin’s role in mitral regurgitation, the other
+on siRNA therapies targeting cadherin-11 in aortic stenosis.</p>
+            <p>Performed Western blot, qPCR, and mouse anatomical dissection to investigate molecular mechanisms of
+valvular diseases, gaining practical insights into potential therapeutic targets.</p>
+            <p>Presented research findings in a symposium to faculty, professionals, and students.</p>
+        </div>
+    </div>
+
+        <!--    CARD 4-->
+    <div class="modal" id="modal-proj">
+            <div class="header">
+                <h1> Projects </h1>
+                <button data-close-button class="cls-button">&times;</button>
+            </div>
+            <div class="text-container">
+                <h2><img src="../img/ML.png" alt="icon" class="proj-icon"> Deep Learning Project – Personal ML Exploration:</h2>
+                <p>I'm currently working on a machine learning project in PyTorch to strengthen my understanding of deep
+    learning through hands-on model development. This work allows me to explore neural architectures, loss
+    functions, and optimization strategies in depth. My passion for AI has grown through the research and
+    design projects I’ve taken on, and I’m deeply committed to pursuing this field long term.</p>
+                <h2><a href="https://gordinahodibert.com" target="_blank"><span><ion-icon name="globe-outline"></ion-icon></span> Personal website:</a></h2>
+                <p>Designed and built a fully customized portfolio site using HTML, CSS, and JavaScript to document my
+    academic journey, research contributions, and creative work. Focused on clean UI/UX and modular updates.</p>
+                <h2><a href="/files/The%20Homeowner's%20Guide%20by%20Gordina%20Hodibert.pdf" target="_blank"><span><ion-icon name="document-text-outline"></ion-icon></span> Real Estate guide: </a></h2>
+                <p>Authored The Homeowner’s Survival Guide, a practical resource to support families navigating foreclosure,
+    predatory lending, and housing insecurity. Includes legal FAQs, budgeting tools, and community resource
+    directories.</p>
+                <h2>VitaliPatch</h2>
+                <p>VitaliPatch is a transdermal microneedle patch aimed at reducing infection rates and improving post-op
+    recovery for C-section patients. Worked closely with a teammate to develop the concept, refine therapeutic
+    delivery mechanisms, and pitch the design to clinicians and engineers. It's a project I'm very passionate
+    about because it's an initiative to solve issues that are currently rampant in the medical industry.</p>
+            </div >
+    </div>
+
+        <!--    CARD 5-->
+    <div class="modal" id="modal-activities">
+            <div class="header">
+                <h1>Activities</h1>
+                <button data-close-button class="cls-button">&times;</button>
+            </div>
+            <div class="text-container">
+                <h2>Chi Alpha at UVA</h2>
+                <p><b>Active member since 2022</b></p>
+                <p><b>Core Group Leader</b> — August 2024 to May 2025</p>
+                <p>Being part of Chi Alpha, I had the opportunity to lead a small group of
+    10+ students in weekly Bible studies, gospel discussions, and prayer as
+    part of Chi Alpha’s Core Group ministry. Collaborated with co-leaders to
+    plan lessons, organize fun activities like games and hangouts, and create
+    a welcoming space for friendship, faith, and spiritual growth.</p>
+                <h2>Intramural Soccer</h2>
+                <p>I’ve played intramural soccer since my first year of college as a way to
+    stay active, connect with friends, and build community. It’s been an outlet
+    for relieving stress, especially during intense academic seasons</p>
+                <h2>National Society of Black Engineers</h2>
+                <p><b>Active member since 2022</b></p>
+                <p>I’ve been a member of NSBE since my first year at UVA. It’s provided an
+    incredible space for mentorship, professional growth, and connection with
+    other Black engineers pursuing excellence in STEM.</p>
+                <h2>Society of Women in Engineering</h2>
+                <p><b>Active member since 2022</b></p>
+                <p>Through SWE, I had the opportunity to volunteer as a guest educator for
+    middle school students. I led lessons on the cardiovascular and respiratory
+    systems, helping them understand how the heart and lungs work together
+    to keep us alive, and showing them how exciting science can be.</p>
+            </div>
+    </div>
+
+        <!--    CARD 6-->
+    <div class="modal" id="modal-awards">
+            <div class="header">
+                <h1> Awards & Recognition </h1>
+                <button data-close-button class="cls-button">&times;</button>
+            </div>
+            <div class="text-container">
+                <p><a href="https://engineering.virginia.edu/offices-programs/clark-scholars" target="_blank">UVA Clark Scholar</a><a href="https://engineering.virginia.edu/offices-programs/clark-scholars/meet-scholars/scholars-2026" target="_blank"> — Class of 2026</a></p>
+                <p><a href="https://giving.virginia.edu/where-to-give/supporting-students/blue-ridge-scholars/" target="_blank">UVA Blue Ridge Scholar</a></p>
+                <p><a href="https://cbid.bme.jhu.edu/news-events/design-competition/" target="_blank">Johns Hopkins Health care competition finalist</a></p>
+                <p><a href="https://records.ureg.virginia.edu/content.php?catoid=67&navoid=5958#dean-s-list" target="_blank">UVA Dean's List</a></p>
+                <p>Black Excellence in Engineering:  nominated by a professor within the Engineering
+    School for your outstanding academic performance, community involvement,
+    and/or excellent character.</p>
+                <p>3rd Place in Vanderbilt University's Summer in a Minute competition</p>
+            </div>
+    </div>
+
+
+        <!--    CARD 7-->
+    <div class="modal" id="modal-volunteering">
+            <div class="header">
+                <h1>Volunteering</h1>
+                <button data-close-button class="cls-button volunteer-button">&times;</button>
+            </div>
+            <div class="text-container">
+                <h2><a href="https://c4kclubhouse.org/" target="_blank">C4K</a></h2>
+                <p><b>Engineering Volunteer</b> — August 2024 to Present</p>
+                <p>Mentored a middle school student through weekly STEM-focused sessions, exploring various hands-on
+    activities and collaborative learning experiences. Together, we developed a photography project where
+    we captured and edited images using Adobe Photoshop to build both creative and technical skills.
+    Since neither of us had prior experience with Photoshop, we learned together and supported each
+    other through the initial challenges until we both became confident in our editing abilities. This
+    experience allowed me to share my passion for STEM education in a meaningful, personalized way
+    while building a strong mentor-mentee relationship based on curiosity, mutual growth, and discovery.
+    <b>Below are some of the images we captured and edited:</b>
+    </p>
+                <video class="video-edit" controls muted loop>
+                    <source src="../img/c4k.mp4" type="video/mp4">
+                </video>
+                <h2><a href="https://centercville.com/" target="_blank">Center Church</a></h2>
+                <p><b>Sunday school teacher</b> — June 2025 to Present</p>
+                <p>One of my favorite volunteer roles is serving as a Sunday school teacher at Center Church in
+    Charlottesville. Each week, I have the privilege of sharing the Word of God and teaching children
+    about Jesus, helping to raise up the next generation of disciples.</p>
+                <h2><a href="https://conversationstoremember.org/" target="_blank">Conversations to Remember</a></h2>
+                <p>Volunteered weekly to engage in one-on-one virtual conversations with senior citizens experiencing
+    dementia during the height of the COVID-19 pandemic. Provided companionship, emotional support,
+    and meaningful social interaction at a time when many families were unable to visit their loved ones.
+    This experience deepened my empathy and strengthened my communication skills while reminding
+    me of the value of simple, human connection.</p>
+            </div>
+    </div>
+
+        <!--    CARD 8-->
+    <div class="modal" id="modal-coursework">
+            <div class="header">
+                <h1> Courses </h1>
+                <button data-close-button class="cls-button course-button">&times;</button>
+            </div>
+            <div class="text-container">
+                <h2>Summer 2022</h2>
+
+                <p>APMA 1090 — Single Variable Calculus I</p>
+                <p>ENGR 1624 — Introduction to Engineering</p>
+
+                <h2>Fall 2022</h2>
+                <p>APMA 1110 — Single Variable Calculus II</p>
+                <p>CHEM 1410 — Intro College Chemistry I</p>
+                <p>CHEM 1411 — Intro College Chem I Lab</p>
+                <p>CS 1110 — Introduction to Programming</p>
+                <p>ENGR 2959 — Special Topics in Engineering</p>
+                <p>STS 1500 — Sci Tech & Contemp Issues</p>
+                <p>UNST 2810 — Intro to Academic Research</p>
+
+                <h2>Spring 2023</h2>
+                <p>APMA 2120 — Multivariable Calculus</p>
+                <p>CHEM 1420 — Intro College Chemistry II</p>
+                <p>CHEM 1421 — Intro College Chem II Lab</p>
+                <p>PHYS 1425 — Intro Physics I for Engineers</p>
+                <p>PHYS 1429 — Intro Physics I Workshop</p>
+                <p>PSYC 1010 — Introductory Psychology</p>
+                <p>UNST 2811 — Intro to Academic Research II</p>
+
+                <h2>Fall 2023 (Transfer Credit)</h2>
+                <p>CHEM 2410 — Organic Chemistry I</p>
+
+                <h2>Fall 2023</h2>
+                <p>BME 2000 — Biomed Engr Design & Discovery</p>
+                <p>BME 2104 — Cell & Molecular for Engineers</p>
+                <p>CHEM 2311 — Org Chem Lab I Non-Chem Major</p>
+                <p>ECE 2200 — Applied Physics</p>
+                <p>KLPA 1300 — Swimming</p>
+                <p>SPAN 1060 — Accelerated Elementary Spanish</p>
+
+                <h2>Spring 2024</h2>
+                <p>APMA 2130 — Ordinary Differential Equations</p>
+                <p>APMA 3110 — Applied Stats & Probability</p>
+                <p>BME 2101 — Physiology I for Engineers</p>
+                <p>BME 2315 — Computational BME</p>
+                <p>SPAN 2010 — Intermediate Spanish</p>
+                <p>ZFOR 3512 — International Study</p>
+
+                <h2>Fall 2024</h2>
+                <p>BME 2102 — Physiology II</p>
+                <p>BME 3080 — Biomed IDEAS Lab I</p>
+                <p>BME 3240 — Biotransport</p>
+                <p>ECE 2410 — Intro to Machine Learning</p>
+                <p>MAE 2040 — Computer Aided Design</p>
+                <p>STS 2760 — Tech&Policy/Intent Meets Proc</p>
+
+                <h2>Spring 2025</h2>
+                <p>BME 2220 — Biomechanics</p>
+                <p>BME 3030 — Design&Innovation in Medicine</p>
+                <p>BME 3090 — Biomed IDEAS Lab II</p>
+                <p>BME 3310 — Biomed Sys Analysis & Design</p>
+                <p>RELC 2360 — Elements of Christian Thought</p>
+
+                <h2>Fall 2025</h2>
+                <p>BME 4063 — Biomed Engr Capstone Design I</p>
+                <p>BME 4290 — Stem Cell Engineering</p>
+                <p>BME 4550 — Spec Topics: Biomedical Engr</p>
+                <p>KLPA 1130 — Soccer</p>
+                <p>MSE 2300 — Science of Cooking</p>
+                <p>STS 4500 — STS and Engineering Practice</p>
+            </div>
+    </div>
+</div>
+<script src="../js/script.js"></script>
+
+<!--for desired icons-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
