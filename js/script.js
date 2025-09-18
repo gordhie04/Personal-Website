@@ -38,6 +38,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+  // =====================================================================================================================
+
+  // Sidebar creation - this is the js code for the sidebar
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    // document.body.style.backgroundColor = "rgba(0,0,1,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.body.style.backgroundColor = "#f1f1f1";
+}
+
+document.addEventListener('click', function(event) {
+    const sidenav = document.getElementById("mySidenav");
+    const hamburger = document.querySelector('.hamburger-icon');
+
+    // Check if sidebar is open (width is not 0)
+    const sidenavStyle = window.getComputedStyle(sidenav);
+    const isOpen = sidenavStyle.width !== '0px';
+
+    // If sidebar is open and click is outside both sidebar and hamburger
+    if (isOpen && !sidenav.contains(event.target) && !hamburger.contains(event.target)) {
+        closeNav();
+    }
+});
+
+  // =================================================================================
+
   // script for individual text highlight in the Introduction section when I put my pointer on it
 window.addEventListener("DOMContentLoaded", () => {
   const para = document.getElementById("intro-text");
@@ -81,11 +110,6 @@ overlay.addEventListener('click', () => {
   document.querySelectorAll('.modal.active').forEach(m => closeModal(m));
   overlay.classList.remove('active');
 });
-
-// let ov = document.getElementById('overlay');
-// ov.classList.add('active');
-// // ov.classList.remove('active');
-
 
 // 5. your helper functions
 function openModal(modal) {
