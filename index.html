@@ -12,28 +12,42 @@
 <body>
   <img class="image-gradient" src="../img/gradient.png" alt="gradient">
 
-  <div class="container">
+<div class="container">
     <header>
-      <h1 class="name-1">Gordina Hodibert</h1>
-    <nav>
-      <a href="/">HOME</a>
-      <a href="/about/">ABOUT</a>
-      <a href="/portfolio/">PORTFOLIO</a>
-      <a href="/contact/">CONTACT</a>
-    </nav>
+        <h1 class="name-1">Gordina Hodibert</h1>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/about/">ABOUT</a>
+            <a href="/portfolio/">PORTFOLIO</a>
+            <a href="/contact/">CONTACT</a>
+        </nav>
+        <div class="hamburger-icon" onclick="openNav()">&#9776;</div>
     </header>
-  </div>
+</div>
 
-  <div class="main-content">
-      <div class="intro">
+<div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="/">HOME</a>
+        <a href="/about/">ABOUT</a>
+        <a href="/portfolio/">PORTFOLIO</a>
+        <a href="/contact/">CONTACT</a>
+</div>
+
+
+
+
+<div id="main">
+    <div class="main-content">
+        <div class="intro">
           <h2 class="tag">INTRODUCTION</h2>
-          <p id="intro-text"> Hello, my name is Gordina Hodibert, and I'm a rising fourth
+          <p id="intro-text">Hello, my name is Gordina Hodibert, and I'm a rising fourth
           year at the University of Virginia. I'm very passionate about learning and discovering my potential.
           Lately, I've developed a strong interest in machine learning and computational biology. I'm excited
-          for how far I'm going to go on my journey. </p>
-      </div>
+          for how far I'm going to go on my journey.</p>
+        </div>
+    </div>
+</div>
 
-     
   <script src="../js/script.js"></script> <!-- To show different colors when a text is hovered over -->
 
 </body>
