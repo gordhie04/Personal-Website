@@ -5,14 +5,13 @@
 }
 
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
     color: #808080FF;
     height: 115rem;
     max-height: 150rem;
     line-height: 1.5;
 }
 
-/*CONTAINER CLASS*/
 .container{
     width: 100%;
     margin: 0 auto;
@@ -22,7 +21,6 @@ body{
     z-index: 300;
 }
 
-/*HEADER*/
 header{
     display: flex;
     justify-content: space-between;
@@ -31,8 +29,6 @@ header{
     z-index: 400;
 }
 
-
-/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -56,7 +52,14 @@ nav a:hover {
   color: #e41364;
 }
 
-/*- Code for glow around name------------------------------------------------------------------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0;
+    overflow-x: hidden;
+}
+
 .name {
     font-family:"Monsieur La Doulaise";
     font-size: 2.2rem;
@@ -87,7 +90,6 @@ nav a:hover {
     animation: animationGradient 60s linear infinite;
     box-shadow: 0 0 15px #c30fa1;
 }
-/* For Animation */
 @keyframes animationGradient {
   to{
     background-position: 200%;
@@ -95,12 +97,11 @@ nav a:hover {
 }
 
 
-/* Shared styles for all cards */
 .card-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    grid-template-columns: repeat(3, 1fr);  
     grid-template-rows: repeat(3, auto);
-    gap: 3rem;                              /* Space between cards */
+    gap: 3rem;    
     max-width: 81%;
     margin: 2rem auto;
     padding: 2rem;
@@ -117,8 +118,6 @@ nav a:hover {
     place-items: flex-end;
     background-size: 105% 59%;
     background-position: center top;
-
-    /*background-position: -5px -5px;*/
     background-repeat: no-repeat;
 }
 
@@ -202,7 +201,6 @@ nav a:hover {
 .modal .header{
     padding: 0 0.5rem;
     display: flex;
-    /*justify-content: flex-start;*/
     align-items: center;
 }
 
@@ -262,7 +260,6 @@ nav a:hover {
     display: list-item;
     list-style: disc;
     margin-left: 1.5rem;
-    /*font-weight: bold;*/
 }
 
 #modal-volunteering p.no-bullet,
@@ -323,14 +320,13 @@ nav a:hover {
 
 .text-container h2{
     font-size: 1.15rem;
-    margin: 0.8rem 0 0 0.5rem;/* top, left, bottom right*/
+    margin: 0.8rem 0 0 0.5rem;
 }
 .text-container span{
     font-size: 1rem;
     text-decoration: none;
 }
 
-/*This is for skill rating - personal opinion*/
 .inline-img {
   height: 18px;
   width: auto;
@@ -338,20 +334,78 @@ nav a:hover {
   margin-left: 5px;
 }
 
+.hamburger-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #808080FF;
+}
 
 @media (max-width: 1123px) {
     .card-container{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem;
-    max-width: 75%;
-    margin: 2rem auto;
-    padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+        max-width: 75%;
+        margin: 2rem auto;
+        padding: 2rem;
     }
 
     .modal {
-    max-width: 90%;
-    max-height: 90%;
+        max-width: 90%;
+        max-height: 90%;
     }
 
+    nav {
+        display: none;
+    }
+
+    .hamburger-icon {
+        display: block;
+        font-size: 2rem;
+    }
+    .hamburger-icon:hover{
+        border-radius: 5px 5px 5px 5px;
+        background-color: #959a9a;
+        color: black;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        right: 0;  
+        background-color: #832564;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+    }
+
+    .sidenav a {
+        padding: 15px 8px 15px 32px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff5fb;  
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #fd8bd7; 
+    }
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
 }
