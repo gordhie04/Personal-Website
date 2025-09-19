@@ -2,24 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /*The type of text we are using for this project. Can easily be changed*/
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
   background-color: #f1f1f1;
   color: gray;
   min-height: 100vh;
   line-height: 1.5;
+    overflow-x: hidden;
 }
 
 
 /*CONTAINER CLASS*/
 .container{
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-  overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    overflow: hidden;
 }
 
 /*HEADER*/
@@ -33,22 +35,21 @@ header{
 }
 
 .name-1 {
-  display: flex;
-  gap: 0.2rem;
-  font-family: "Mea Culpa", cursive; /* or your preferred font */
-  /*font-family:"Monsieur La Doulaise";*/
-  font-size: 3.5rem;
-  font-weight: 500;
+    display: flex;
+    gap: 0.2rem;
+    font-family: "Mea Culpa", cursive; 
+    /*font-family:"Monsieur La Doulaise";*/
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-weight: 500;
 }
 
 .name-1 span {
   color: transparent;
-  -webkit-text-stroke: 1px gray; /* fallback before JS loads keyframes */
+  -webkit-text-stroke: 1px gray; 
   opacity: 0;
   animation-fill-mode: forwards;
 }
 
-/*Navigation and links to different pages*/
 nav{
     display: flex;
     flex-wrap: nowrap;
@@ -57,7 +58,7 @@ nav{
     align-items: center;
     white-space: nowrap;
     min-width: 0;
-    gap: 1.5rem;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
     position: relative;
     bottom: 0.13rem;
     left: -1rem;
@@ -65,7 +66,7 @@ nav{
 
 
 nav a {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
   letter-spacing: 0.04rem;
   transition: color 0.2s ease;
   text-decoration: none;
@@ -75,7 +76,8 @@ nav a {
 nav a:hover {
   color: #222222;
 }
-/*sidebar edits -----------*/
+
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -86,13 +88,12 @@ nav a:hover {
 
 
 .hamburger-icon {
-    display: none !important; /* Force hide on desktop */
+    display: none !important; 
     font-size: 1.5rem;
     cursor: pointer;
     color: #808080FF;
 }
 
-/*=========================*/
 .main-content{
     position: relative;
     display: grid;
@@ -102,11 +103,9 @@ nav a:hover {
     align-content: center;
     min-height: 70vh;
     gap: 1rem;
-    padding: 2rem;
+    padding: clamp(1rem, 3vw, 2rem);
     width: 98%;
 }
-
-
 
 .image-gradient{
     position: absolute;
@@ -119,10 +118,11 @@ nav a:hover {
     z-index: -1;
 }
 
-/*Intro CONTENT*/
+
 .intro{
     grid-area: intro;
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
     padding: 1rem;
     margin-top: -8rem;
     display: flex;
@@ -131,11 +131,11 @@ nav a:hover {
 
 }
 
-/*This is for some basic alignment. and the intro-text is for individual word selection*/
 .intro p{
     padding-top: 5px;
     text-align: left;
     max-width: 100%;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 #intro-text {
@@ -172,8 +172,6 @@ nav a:hover {
     height: 100%;
     }
 
-
-    /*Sidebar ------ for shrink edits*/
     nav{
     display: none;
     }
@@ -181,6 +179,11 @@ nav a:hover {
     .hamburger-icon {
         display: block !important;
         font-size: 2rem;
+    }
+    .hamburger-icon:hover{
+        border-radius: 5px 5px 5px 5px;
+        background-color: #959a9a;
+        color: #1e1e1e;
     }
 
     .sidenav {
