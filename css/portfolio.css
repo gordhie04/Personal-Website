@@ -10,6 +10,11 @@ body{
     height: 115rem;
     max-height: 150rem;
     line-height: 1.5;
+    background-image: url('../img/background05.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .container{
@@ -49,7 +54,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #e41364;
+  color: #0a5531;
 }
 
 .sidenav {
@@ -60,10 +65,12 @@ nav a:hover {
     overflow-x: hidden;
 }
 
+
 .name {
     font-family:"Monsieur La Doulaise";
     font-size: 2.2rem;
     font-weight: 700;
+    color: rgb(6, 53, 39);
 
     position: relative;
     left: 1rem;
@@ -75,7 +82,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f1f1f1;
+    background: #76b197;
     line-height: 150;
 }
 
@@ -85,10 +92,10 @@ nav a:hover {
     z-index: -1;
     inset: -3px -3px -3px -3px;
     border-radius: 100px;
-    background: linear-gradient(to right, #ca7cb0, #dd5692, #ec0687, #9a063b);
+    background: linear-gradient(to right, #0fa54a, #1aa32c, #057324, #024304);
     background-size: 200% 200%;
     animation: animationGradient 60s linear infinite;
-    box-shadow: 0 0 15px #c30fa1;
+    box-shadow: 0 0 15px #09ac6b;
 }
 @keyframes animationGradient {
   to{
@@ -101,7 +108,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);  
     grid-template-rows: repeat(3, auto);
-    gap: 3rem;    
+    gap: 3rem;                             
     max-width: 81%;
     margin: 2rem auto;
     padding: 2rem;
@@ -113,17 +120,19 @@ nav a:hover {
     width: 100%;
     height: 28rem;
     border-radius: 20px;
-    box-shadow: 0 10px 25px #b8b7b7;
+    box-shadow: 0 10px 25px #043c2d;
+
     display: grid;
     place-items: flex-end;
-    background-size: 105% 59%;
+    background-size: cover;
     background-position: center top;
+
     background-repeat: no-repeat;
 }
 
 .card h3{
     position: absolute;
-    color: #673442;
+    color: #e1e1e1;
     font-size: 1.7rem;
     font-family: "Rasa", serif;
     top: 17rem;
@@ -136,42 +145,45 @@ nav a:hover {
     left: 0.5rem;
     font-family: "Rasa", serif;
     font-size: 1.1rem;
-    color: #3e1f28;
+    color: #e1e1e1;
 }
 
 
 .card:hover{
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px #d504a4;
+    box-shadow: 0 20px 40px #0a9c67;
     cursor: pointer;
 }
 
 .card-1 {
-    background-image: url('../img/education.png');
+    background-image: url('../img/education02.png');
+    background-size: cover;
 }
 
 .card-2 {
-    background-image: url('../img/skills.png');
+    background-image: url('../img/skills00.png');
 }
 .card-3 {
-    background-image: url('../img/experience.png');
+    background-image: url('../img/experience00.png');
 
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 }
 .card-4 {
-    background-image: url('../img/projects.png');
+    background-image: url('../img/projects02.png');
 }
 .card-5 {
-    background-image: url('../img/leadership.png');
+    background-image: url('../img/activity00.png');
 }
 .card-6 {
-    background-image: url('../img/awards.png');
+    background-image: url('../img/awards00.png');
 }
 .card-7 {
-    background-image: url('../img/volunteering.png');
+    background-image: url('../img/volunteering01.png');
 }
 .card-8 {
-    background-image: url('../img/courses.png');
+    background-image: url('../img/coursework01.png');
 }
 
 .modal.active{
@@ -187,9 +199,9 @@ nav a:hover {
     color: #fff5fb;
     transform: translate(-50%, -50%) scale(0);
     transition:200ms ease-in-out;
-    border: 2px solid #ed3f8d;
+    border: 2px solid #55af14;
     border-radius: 10px;
-    background-color: #832564;
+    background-color: #021b07;
     width: fit-content;
     min-width: 35%;
     max-width: 60%;
@@ -366,8 +378,8 @@ nav a:hover {
     }
     .hamburger-icon:hover{
         border-radius: 5px 5px 5px 5px;
-        background-color: #959a9a;
-        color: black;
+        background-color: #a81363;
+        color: #aeacac;
     }
 
     .sidenav {
