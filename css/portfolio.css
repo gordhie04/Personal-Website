@@ -97,6 +97,7 @@ nav a:hover {
     animation: animationGradient 60s linear infinite;
     box-shadow: 0 0 15px #09ac6b;
 }
+
 @keyframes animationGradient {
   to{
     background-position: 200%;
@@ -108,7 +109,7 @@ nav a:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);  
     grid-template-rows: repeat(3, auto);
-    gap: 3rem;                             
+    gap: 3rem;                           
     max-width: 81%;
     margin: 2rem auto;
     padding: 2rem;
@@ -259,7 +260,7 @@ nav a:hover {
 
 .modal .cls-button:hover{
     border-radius: 50%;
-    background: #a81363;
+    background: #055031;
 }
 
 #modal-volunteering p,
@@ -304,7 +305,7 @@ nav a:hover {
 #modal-exp a:hover,
 #modal-awards a:hover,
 #modal-edu a:hover{
-    color: #fd8bd7;
+    color: #057518;
 }
 
 #modal-proj a span{
@@ -350,7 +351,7 @@ nav a:hover {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #808080FF;
+    color: #036549;
 }
 
 @media (max-width: 1123px) {
@@ -378,9 +379,10 @@ nav a:hover {
     }
     .hamburger-icon:hover{
         border-radius: 5px 5px 5px 5px;
-        background-color: #a81363;
-        color: #aeacac;
+        background-color: #084738;
+        color: #a2e3bc;
     }
+
 
     .sidenav {
         height: 100%;
@@ -389,7 +391,7 @@ nav a:hover {
         z-index: 1001;
         top: 0;
         right: 0;  
-        background-color: #832564;
+        background-color: #053e31;
         overflow-x: hidden;
         padding-top: 60px;
         transition: 0.5s;
@@ -405,7 +407,7 @@ nav a:hover {
     }
 
     .sidenav a:hover {
-        color: #fd8bd7; 
+        color: #489c86; 
     }
 
     .sidenav .closebtn {
