@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+    background-color: #0c2301;
+}
+
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #808080FF;
     height: 115rem;
     max-height: 150rem;
@@ -15,6 +20,7 @@ body{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+    padding-top: env(safe-area-inset-top, 0);
 }
 
 .container{
