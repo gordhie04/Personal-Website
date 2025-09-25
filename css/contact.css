@@ -4,16 +4,12 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-    background-color: #012033;
-}
-
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: #d1d1d1;
     line-height: 1.5;
     background-image: url('../img/blue01.png');
+    background-color: #012033;
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: env(safe-area-inset-top, 0);
