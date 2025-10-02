@@ -133,8 +133,9 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: black;
-
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #dfdede;
 }
 
 .intro p{
@@ -177,7 +178,9 @@ nav a:hover {
 
     .intro{
         margin-top: 5rem;
-        color: #000000;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #dfdede;
     }
 
     .image-gradient{
