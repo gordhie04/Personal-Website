@@ -68,7 +68,7 @@ nav{
     gap: clamp(0.5rem, 2vw, 1.5rem);
     position: relative;
     bottom: 0.13rem;
-    left: -1rem;
+    left: -1rem
     color: black;
 }
 
