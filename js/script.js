@@ -1,3 +1,48 @@
+// script zoom in and out
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section-01, .section-02, .section-03');
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        // Get the intro box (only exists in section-01)
+        const intro = section.querySelector('.intro');
+
+        if (intro) {
+            // For section-01: stop zoom when intro disappears
+            const introRect = intro.getBoundingClientRect();
+            const introBottom = introRect.bottom;
+
+            // Calculate scroll depth
+            const scrollDepth = -rect.top;
+
+            // Stop zooming when intro bottom leaves the top of viewport
+            const maxScrollForZoom = scrollDepth + Math.max(0, introBottom);
+
+            // Calculate progress
+            const progress = Math.max(0, Math.min(1, scrollDepth / maxScrollForZoom));
+
+            // Smooth zoom from 100% to 120%
+            const minZoom = 100;
+            const maxZoom = 120;
+            const zoom = minZoom + (progress * (maxZoom - minZoom));
+
+            section.style.backgroundSize = `${zoom}%`;
+        } else {
+            // For other sections without intro, use original logic
+            const scrollDepth = -rect.top;
+            const sectionHeight = section.offsetHeight;
+            const progress = Math.max(0, Math.min(1, scrollDepth / (sectionHeight + viewportHeight)));
+
+            const minZoom = 100;
+            const maxZoom = 120;
+            const zoom = minZoom + (progress * (maxZoom - minZoom));
+
+            section.style.backgroundSize = `${zoom}%`;
+        }
+    });
+});
 
  <!--  Javascript to go around each text and highlight it with color - this is for .name (Gordina Hodibert)-->
 // 1. Generate and inject keyframes
@@ -115,8 +160,17 @@ overlay.addEventListener('click', () => {
 function openModal(modal) {
   modal.classList.add('active');
   overlay.classList.add('active');
+  document.body.classList.add('modal-open');
 }
+
 function closeModal(modal) {
   modal.classList.remove('active');
   overlay.classList.remove('active');
+
+  // Only unlock scroll if no other modals are open
+  if (!document.querySelector('.modal.active')) {
+    document.body.classList.remove('modal-open');
+  }
 }
+
+
