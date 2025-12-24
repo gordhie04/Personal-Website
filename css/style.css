@@ -395,15 +395,20 @@ nav{
 
 
 nav a {
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  letter-spacing: 0.04rem;
-  transition: color 0.2s ease;
-  text-decoration: none;
-  color: inherit;
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+    letter-spacing: 0.04rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.67);
+    width: fit-content;
+    padding: 0 2rem;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
 }
 
 nav a:hover {
-  color: #222222;
+    background-color: rgba(78, 85, 51, 0.46);
 }
 .sidenav {
     height: 100%;
