@@ -61,7 +61,7 @@ body{
 /*SECTION 1 CSS CODE*/
 .section-01 {
     background-image: url('../img/Headshot_Official.png');
-    height: 275vh;
+    height: 290vh;
 }
 .intro{
     position: absolute;
@@ -73,7 +73,7 @@ body{
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     color: #050505;
-    max-height: 80vh;
+    max-height: 90vh;
     overflow-y: auto;
 }
 
