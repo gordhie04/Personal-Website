@@ -203,6 +203,8 @@ body.modal-open {
     width: 98%;
     white-space: pre;
     line-height: 1.6;
+    overflow-x: hidden;
+    /*overflow-wrap: break-word;*/
 }
 .modal h2{
     white-space: pre;
