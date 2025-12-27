@@ -48,15 +48,6 @@ body{
 }
 
 
-
-
-
-.section-03{
-    background-image: url('../img/section02-background00.png');
-}
-
-
-
 /*----------------------------------------------------------------------------*/
 /*SECTION 1 CSS CODE*/
 .section-01 {
@@ -95,22 +86,24 @@ body{
 }
 
 .section-02 .title{
-    position: relative;
-    margin: 75vh auto -50rem;
-    font-size: 10rem;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    font-size: 12rem;
     width: fit-content;
     padding: 0 5rem;
+    margin-bottom: 1.5rem;
     color: black;
     border-radius: 30px;
     background: rgba(67, 55, 32, 0.32);
     backdrop-filter: blur(5px);
-    font-family: "Rubik 80s Fade", system-ui;
+    font-family: "Changa One", sans-serif;
 }
 
 .card-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: auto repeat(3, auto);
     gap: 3rem;                              /* Space between cards */
     max-width: 81%;
     margin: 100vh auto;
@@ -244,6 +237,15 @@ body.modal-open {
     background: #939292;
 }
 
+.modal p{
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    width: auto;
+    white-space: pre;
+    line-height: 1.6;
+}
+
+
 #modal-volunteering p,
 #modal-proj p,
 #modal-exp p,
@@ -252,9 +254,9 @@ body.modal-open {
 #modal-activities p,
 #modal-coursework p{
     display: list-item;
-    list-style: disc;
-    margin-left: 1.5rem;
-    /*font-weight: bold;*/
+    list-style-position: inside;
+    margin-left: 5px;
+    /*white-space: normal;*/
 }
 
 #modal-volunteering p.no-bullet,
@@ -307,7 +309,7 @@ body.modal-open {
 
 .video-edit{
     position: relative;
-    left: 1.5rem;
+    left: 0.5rem;
     width: 41rem;
     height: auto;
     border-radius: 10px;
@@ -338,10 +340,69 @@ body.modal-open {
 }
 /*END OF SECTION 2 CSS STYLE*/
 
+/*----------------------------------------------------------------------------*/
+/*SECTION 3 CSS CODE*/
+/* Shared styles for all cards */
+.section-03{
+    height: 100vh;  /* Give it more space */
+    background-image: url('../img/contact-02.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.contact-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
 
+.contact-content h2 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: "Changa One", sans-serif;
+    margin-bottom: 1rem;
+    color: #000;
+}
 
+.contact-content p {
+    /*font-family: "Mea Culpa", cursive;*/
+    font-family:  "Rasa", serif;;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 3rem;
+    color: #333;
+}
 
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icons a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.gmail-icon{
+    scale: 1.2;
+}
+
+.github-icon{
+    scale: 1.55;
+}
+
+.icons a:hover img {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 5px 15px rgb(0, 0, 0));
+}
 
 
 
