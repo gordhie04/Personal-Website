@@ -2,148 +2,139 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 html, body{
     height: 100%;
-    background-color: #041b0a;
+    background-color: #ffffff;
 }
 
 body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #808080FF;
-    height: 115rem;
-    max-height: 150rem;
+    color: #575656;
+    min-height: 100vh;
     line-height: 1.5;
-    background-image: url('../img/background05.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    overflow-x: hidden;
     padding-top: env(safe-area-inset-top, 0);
 }
 
-.container{
+.container section{
     width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+.card-00{
+    top: 0;
     position: relative;
-    overflow: hidden;
-    z-index: 300;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* The magic */
+    border-bottom: 3px solid white;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
-    z-index: 400;
-}
-
-nav{
-    display: flex;
-    flex-wrap: wrap;
-    flex: 1 1 auto;
-    justify-content: end;
-    gap: 1.5rem;
+.section-01,
+.section-02,
+.section-03{
     position: relative;
-    bottom: 1rem;
-    left: -1rem;
-}
-
-nav a {
-    font-size: 1rem;
-    letter-spacing: 0.04rem;
-    transition: color 0.2s ease;
-    text-decoration: none;
-    color: inherit;
-}
-
-nav a:hover {
-  color: #0a5531;
-}
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    right: 0;
-    overflow-x: hidden;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* The magic */
+    border-bottom: 3px solid white;
 }
 
 
-.name {
-    font-family:"Monsieur La Doulaise";
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: rgb(6, 53, 39);
-
-    position: relative;
-    left: 1rem;
-    width: 80%;
-    max-width: 7rem;
-    height: 7rem;
-    border-radius: 100px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #76b197;
-    line-height: 150;
+/*----------------------------------------------------------------------------*/
+/*SECTION 1 CSS CODE*/
+.section-01 {
+    background-image: url('../img/Headshot_Official.png');
+    height: 290vh;
 }
-
-.name::before {
-    content: "";
+.intro{
     position: absolute;
-    z-index: -1;
-    inset: -3px -3px -3px -3px;
-    border-radius: 100px;
-    background: linear-gradient(to right, #0fa54a, #1aa32c, #057324, #024304);
-    background-size: 200% 200%;
-    animation: animationGradient 60s linear infinite;
-    box-shadow: 0 0 15px #09ac6b;
+    top: 100vh;
+    left: 50vh;
+    width: 40%;
+    max-width: 600px;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #050505;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
-@keyframes animationGradient {
-  to{
-    background-position: 200%;
-  }
+.intro p{
+    padding-top: 5px;
+    text-align: left;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
+
+/*----------------------------------------------------------------------------*/
+/*SECTION 2 CSS CODE*/
+/* Shared styles for all cards */
+.section-02 {
+    background-image: url('../img/section02-background01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400vh;
+}
+
+.section-02 .title{
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    font-size: 12rem;
+    width: fit-content;
+    padding: 0 5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+    border-radius: 30px;
+    background: rgba(67, 55, 32, 0.32);
+    backdrop-filter: blur(5px);
+    font-family: "Changa One", sans-serif;
+}
 
 .card-container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  
-    grid-template-rows: repeat(3, auto);
-    gap: 3rem;                           
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    grid-template-rows: auto repeat(3, auto);
+    gap: 3rem;                              /* Space between cards */
     max-width: 81%;
-    margin: 2rem auto;
+    margin: 100vh auto;
     padding: 2rem;
 }
 
 .card {
-    position: relative;
-    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    max-width: 20rem;
     height: 28rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px #043c2d;
-
-    display: grid;
-    place-items: flex-end;
-    background-size: cover;
-    background-position: center top;
-
-    background-repeat: no-repeat;
+    border-radius: 100px;
+    box-shadow: 0 10px 25px #000000;
+    background: rgba(67, 55, 32, 0.32); /* More opaque */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .card h3{
-    position: absolute;
-    color: #e1e1e1;
+    color: #000000;
     font-size: 1.7rem;
     font-family: "Rasa", serif;
-    top: 17rem;
-    left: 0.5rem;
+
+}
+
+.card h2 img {
+    width: 10rem;
+    height: auto;
 }
 
 .card p{
@@ -152,49 +143,23 @@ nav a:hover {
     left: 0.5rem;
     font-family: "Rasa", serif;
     font-size: 1.1rem;
-    color: #e1e1e1;
+    color: #000000;
 }
 
 
 .card:hover{
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px #0a9c67;
+    box-shadow: 0 20px 40px #000000;
     cursor: pointer;
 }
 
-.card-1 {
-    background-image: url('../img/education02.png');
-    background-size: cover;
-}
-
-.card-2 {
-    background-image: url('../img/skills00.png');
-}
-.card-3 {
-    background-image: url('../img/experience00.png');
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-.card-4 {
-    background-image: url('../img/projects02.png');
-}
-.card-5 {
-    background-image: url('../img/activity00.png');
-}
-.card-6 {
-    background-image: url('../img/awards00.png');
-}
-.card-7 {
-    background-image: url('../img/volunteering01.png');
-}
-.card-8 {
-    background-image: url('../img/coursework01.png');
-}
 
 .modal.active{
     transform: translate(-50%, -50%) scale(1);
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .modal{
@@ -203,12 +168,12 @@ nav a:hover {
     text-align: left;
     top: 50%;
     left: 50%;
-    color: #fff5fb;
+    color: #040404;
     transform: translate(-50%, -50%) scale(0);
     transition:200ms ease-in-out;
-    border: 2px solid #55af14;
+    border: 2px solid #8c8b8b;
     border-radius: 10px;
-    background-color: #021b07;
+    background-color: rgb(232, 230, 224);
     width: fit-content;
     min-width: 35%;
     max-width: 60%;
@@ -220,6 +185,7 @@ nav a:hover {
 .modal .header{
     padding: 0 0.5rem;
     display: flex;
+    /*justify-content: flex-start;*/
     align-items: center;
 }
 
@@ -230,6 +196,8 @@ nav a:hover {
     width: 98%;
     white-space: pre;
     line-height: 1.6;
+    overflow-x: hidden;
+    /*overflow-wrap: break-word;*/
 }
 .modal h2{
     white-space: pre;
@@ -246,7 +214,7 @@ nav a:hover {
     font-weight: bold;
     outline: none;
     border: none;
-    color: #ede8ea;
+    color: #040404;
     background: none;
 }
 
@@ -266,8 +234,17 @@ nav a:hover {
 
 .modal .cls-button:hover{
     border-radius: 50%;
-    background: #055031;
+    background: #939292;
 }
+
+.modal p{
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    width: auto;
+    white-space: pre;
+    line-height: 1.6;
+}
+
 
 #modal-volunteering p,
 #modal-proj p,
@@ -277,8 +254,9 @@ nav a:hover {
 #modal-activities p,
 #modal-coursework p{
     display: list-item;
-    list-style: disc;
-    margin-left: 1.5rem;
+    list-style-position: inside;
+    margin-left: 5px;
+    /*white-space: normal;*/
 }
 
 #modal-volunteering p.no-bullet,
@@ -296,7 +274,7 @@ nav a:hover {
 #modal-awards a,
 #modal-edu a{
     text-decoration: none;
-    color: #fff5fb;
+    color: #0e0e0e;
 }
 
 
@@ -311,7 +289,7 @@ nav a:hover {
 #modal-exp a:hover,
 #modal-awards a:hover,
 #modal-edu a:hover{
-    color: #057518;
+    color: #15018e;
 }
 
 #modal-proj a span{
@@ -331,7 +309,7 @@ nav a:hover {
 
 .video-edit{
     position: relative;
-    left: 1.5rem;
+    left: 0.5rem;
     width: 41rem;
     height: auto;
     border-radius: 10px;
@@ -339,13 +317,14 @@ nav a:hover {
 
 .text-container h2{
     font-size: 1.15rem;
-    margin: 0.8rem 0 0 0.5rem;
+    margin: 0.8rem 0 0 0.5rem;/* top, left, bottom right*/
 }
 .text-container span{
     font-size: 1rem;
     text-decoration: none;
 }
 
+/*This is for skill rating - personal opinion*/
 .inline-img {
   height: 18px;
   width: auto;
@@ -359,36 +338,192 @@ nav a:hover {
     cursor: pointer;
     color: #036549;
 }
+/*END OF SECTION 2 CSS STYLE*/
 
-@media (max-width: 1123px) {
-    .card-container{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 3rem;
-        max-width: 75%;
-        margin: 2rem auto;
-        padding: 2rem;
+/*----------------------------------------------------------------------------*/
+/*SECTION 3 CSS CODE*/
+/* Shared styles for all cards */
+.section-03{
+    height: 100vh;  /* Give it more space */
+    background-image: url('../img/contact-02.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.contact-content h2 {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-family: "Changa One", sans-serif;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.contact-content p {
+    /*font-family: "Mea Culpa", cursive;*/
+    font-family:  "Rasa", serif;;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.icons a {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icons img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+}
+
+.gmail-icon{
+    scale: 1.2;
+}
+
+.github-icon{
+    scale: 1.55;
+}
+
+.icons a:hover img {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 5px 15px rgb(0, 0, 0));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*NAVIGATION BAR*/
+nav{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    color: black;
+    justify-content: end;
+    font-weight: bold;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+    white-space: nowrap;
+    padding: 1rem 3rem;
+    z-index: 999;
+}
+
+
+.name-1{
+    position: fixed;
+    left: 5rem;
+}
+
+.name-1 {
+    display: flex;
+    gap: 0.2rem;
+    font-family: "Mea Culpa", cursive;
+    font-size: clamp(1.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    z-index: 1100;
+}
+
+.name-1 span {
+  color: transparent;
+  -webkit-text-stroke: 1px gray;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+
+nav a {
+    font-size: clamp(0.8rem, 1.5vw, 2rem);
+    letter-spacing: 0.04rem;
+    transition: color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    background: rgba(0, 0, 0, 0.35);
+    width: fit-content;
+    padding: 0 2rem;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background-color: rgba(78, 85, 51, 0.46);
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    right: 0;
+    overflow-x: hidden;
+}
+
+.hamburger-icon {
+    display: none !important;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #808080FF;
+}
+
+
+@media (max-width: 1200px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "intro"
+            "headshot";
+        min-height: 80vh;
     }
 
-    .modal {
-        max-width: 90%;
-        max-height: 90%;
+    .intro{
+        margin-top: 5rem;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #dfdede;
     }
 
-    nav {
-        display: none;
+    .image-gradient{
+    width: 100%;
+    height: 100%;
+    }
+
+
+    nav{
+    display: none;
     }
 
     .hamburger-icon {
-        display: block;
+        display: block !important;
         font-size: 2rem;
     }
     .hamburger-icon:hover{
         border-radius: 5px 5px 5px 5px;
-        background-color: #084738;
-        color: #a2e3bc;
+        background-color: #959a9a;
+        color: #1e1e1e;
     }
-
 
     .sidenav {
         height: 100%;
@@ -396,8 +531,8 @@ nav a:hover {
         position: fixed;
         z-index: 1001;
         top: 0;
-        right: 0;  
-        background-color: #053e31;
+        right: 0;
+        background-color: #202325;
         overflow-x: hidden;
         padding-top: 60px;
         transition: 0.5s;
@@ -407,13 +542,13 @@ nav a:hover {
         padding: 15px 8px 15px 32px;
         text-decoration: none;
         font-size: 18px;
-        color: #fff5fb;  
+        color: #ccc;
         display: block;
         transition: 0.3s;
     }
 
     .sidenav a:hover {
-        color: #489c86; 
+        color: #000000;
     }
 
     .sidenav .closebtn {
@@ -424,8 +559,11 @@ nav a:hover {
         margin-left: 50px;
     }
 
+    .headshot{
+        justify-self: center;
+    }
+
     #main {
-        transition: margin-left .5s;
         padding: 20px;
     }
 }
