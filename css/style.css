@@ -185,7 +185,6 @@ body.modal-open {
 .modal .header{
     padding: 0 0.5rem;
     display: flex;
-    /*justify-content: flex-start;*/
     align-items: center;
 }
 
@@ -193,17 +192,15 @@ body.modal-open {
     display: flex;
     margin: 0;
     padding: 0 0 0 0.5rem;
-    width: 98%;
     white-space: pre;
     line-height: 1.6;
     overflow-x: hidden;
-    /*overflow-wrap: break-word;*/
+    width: auto;
 }
+
 .modal h2{
     white-space: pre;
 }
-
-
 
 .modal .cls-button {
     margin-left: auto;
@@ -252,13 +249,16 @@ body.modal-open {
 #modal-skill p,
 #modal-awards p,
 #modal-activities p,
+#modal-presentation p,
 #modal-coursework p{
     display: list-item;
     list-style-position: inside;
     margin-left: 5px;
-    /*white-space: normal;*/
 }
-
+#modal-presentations p.no-bullet{
+    padding: 0 0 1rem 8.5px;
+}
+#modal-presentations p.no-bullet,
 #modal-volunteering p.no-bullet,
 #modal-activities p.no-bullet,
 #modal-exp p.no-bullet{
@@ -410,16 +410,6 @@ body.modal-open {
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*NAVIGATION BAR*/
 nav{
     position: fixed;
@@ -473,97 +463,13 @@ nav a {
 nav a:hover {
     background-color: rgba(78, 85, 51, 0.46);
 }
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    right: 0;
-    overflow-x: hidden;
-}
-
-.hamburger-icon {
-    display: none !important;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #808080FF;
-}
 
 
 @media (max-width: 1200px) {
-    .main-content {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "intro"
-            "headshot";
-        min-height: 80vh;
-    }
-
-    .intro{
-        margin-top: 5rem;
-        border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #dfdede;
-    }
-
-    .image-gradient{
-    width: 100%;
-    height: 100%;
-    }
-
-
-    nav{
-    display: none;
-    }
-
-    .hamburger-icon {
-        display: block !important;
-        font-size: 2rem;
-    }
-    .hamburger-icon:hover{
-        border-radius: 5px 5px 5px 5px;
-        background-color: #959a9a;
-        color: #1e1e1e;
-    }
-
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1001;
-        top: 0;
-        right: 0;
-        background-color: #202325;
-        overflow-x: hidden;
-        padding-top: 60px;
-        transition: 0.5s;
-    }
-
-    .sidenav a {
-        padding: 15px 8px 15px 32px;
-        text-decoration: none;
-        font-size: 18px;
-        color: #ccc;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-        color: #000000;
-    }
-
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    .headshot{
-        justify-self: center;
-    }
-
-    #main {
-        padding: 20px;
-    }
+    .section-01 {
+    background-image: url('../img/Headshot_Official.png');
+    background-size: cover;
+        background-repeat: no-repeat;
+    height: 290vh;
+}
 }
