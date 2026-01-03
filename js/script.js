@@ -46,7 +46,7 @@ window.addEventListener('scroll', function() {
 
  <!--  Javascript to go around each text and highlight it with color - this is for .name (Gordina Hodibert)-->
 // 1. Generate and inject keyframes
-const colors = ["#564378", "#7c696d", "#5d5d7e", "#853f37", "#5A032BFF", "#4ec5ff", "#23451FFF", "#7570FF"];
+const colors = ["#000000", "#ffdd00", "#ff0076", "#ff6400", "#5d00ff", "#ea00ff", "#02d9ff","#0bff00"];
 
 function getRandomColorSet() {
   const shuffled = [...colors].sort(() => Math.random() - 0.5);
@@ -59,9 +59,9 @@ const styleTag = document.createElement("style");
 styleTag.textContent = `
   @keyframes strokeColor {
     0%   { opacity: 0; -webkit-text-stroke: 1px gray; }
-    50%  { opacity: 1; -webkit-text-stroke: 1px ${color1}; }
-    75%  { -webkit-text-stroke: 1px ${color2}; }
-    100% { -webkit-text-stroke: 1px ${color3}; }
+    50%  { opacity: 1; -webkit-text-stroke: 2px ${color1}; }
+    75%  { -webkit-text-stroke: 2px ${color2}; }
+    100% { -webkit-text-stroke: 2px ${color3}; }
   }
 `;
 document.head.appendChild(styleTag);
