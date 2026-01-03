@@ -46,7 +46,9 @@ window.addEventListener('scroll', function() {
 
  <!--  Javascript to go around each text and highlight it with color - this is for .name (Gordina Hodibert)-->
 // 1. Generate and inject keyframes
-const colors = ["#000000", "#ffdd00", "#ff0076", "#ff6400", "#5d00ff", "#ea00ff", "#02d9ff","#0bff00"];
+const colors = ["#000000", "#ffdd00", "#ff0076", "#ff6400",
+    "#5902ef", "#d100e3", "#02d9ff","#0bff00",
+    "#000dff"];
 
 function getRandomColorSet() {
   const shuffled = [...colors].sort(() => Math.random() - 0.5);
