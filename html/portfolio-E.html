@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio-E</title>
+
+    <link rel="stylesheet" href="../css/portfolio-E.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <a href="main.html"  class="acronym">GPH</a>
+    <nav>
+        <a href="main.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="main.html#portfolio-engineering">PORTFOLIO</a>
+        <a href="main.html#contact">CONTACT</a>
+    </nav>
+</header>
+
+<div class="Research">
+    <div class="research-box">
+        <div class="title-group">
+            <h1>ENGINEERING RESEARCH</h1>
+            <p id="subtitle"></p>
+        </div>
+
+        <div class="lab-block lab-1">
+            <div class="lab-header">
+                <h2> <a href="https://engineering.virginia.edu/labs-groups/cardiac-systems-biology-group" target="_blank">Cardiac Systems Biology Group</a><span class="lab-link">&#8599;</span></h2>
+                <div class="lab-school">University of Virginia</div>
+                <p class="lab-desc">Top engineering lab at UVA using AI and ML to find new treatments for heart failure</p>
+                <div class="lab-meta">Undergraduate Researcher <a href="https://engineering.virginia.edu/faculty/jeff-saucerman" target="_blank">(PI: Jeffery Saucerman, Ph.D. &#8599;)</a></div>
+                <div class="lab-dates">October 2022 &ndash; Present | Charlottesville, VA</div>
+            </div>
+
+            <div class="project-grid">
+                <button class="project-card" data-project="p-cyclotran" aria-expanded="false">
+                    <div class="project-top">
+                        <span class="project-tag">Project 3</span>
+                        <span class="project-chevron">&#9662;</span>
+                    </div>
+                    <div class="project-title">Mechanistic ML of Cardiac Regeneration Using CycloTran</div>
+                    <div class="project-body">
+                        <div class="project-body-inner">
+                            <span class="badge CSBG">Matlab</span>
+                            <span class="badge CSBG">Fiji [ImageJ]</span>
+                            <span class="badge CSBG">Python</span>
+                            <ul>
+                                <li>Extended CycloTran, a MATLAB-based framework combining single-cell image analysis
+                                    with ODE-based dynamical modeling, to infer cardiomyocyte cell-cycle transition rates
+                                    from heterogeneous tissue samples.</li>
+                                <li>Reproduced and validated model behavior by aligning image-derived classifications
+                                    (DAPI/Ki67) with simulation outputs and refining parameters for stability and
+                                    biological consistency.</li>
+                                <li>Verified how LRP1 perturbation modulates proliferation dynamics; co-authoring a
+                                    manuscript on model-driven insights into post-MI remodeling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="project-card" data-project="p-fibroblast" aria-expanded="false">
+                    <div class="project-top">
+                        <span class="project-tag">Project 2</span>
+                        <span class="project-chevron">&#9662;</span>
+                    </div>
+                    <div class="project-title">ML-Based Quantification of Fibroblast Proliferation</div>
+                    <div class="project-body">
+                        <div class="project-body-inner">
+                            <span class="badge CSBG">Ilastik</span>
+                            <span class="badge CSBG">Cell Profiler</span>
+                            <span class="badge CSBG">Python</span>
+                            <span class="badge CSBG">Pandas/NumPy</span>
+                            <span class="badge CSBG">Matplotlib/Seaborn</span>
+                            <ul>
+                                <li>Built an ML-driven image analysis pipeline integrating Ilastik, CellProfiler, and Python to classify and quantify fibroblast proliferation across 200+ immunofluorescence images.</li>
+                                <li>Addressed challenges in variable staining patterns, illumination, and morphology by designing preprocessing, feature extraction, and validation workflows.</li>
+                                <li>Verified how LRP1 perturbation modulates proliferation dynamics; co-authoring a manuscript on model-driven insights into post-MI remodeling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="project-card" data-project="p-hypertrophy" aria-expanded="false">
+                    <div class="project-top">
+                        <span class="project-tag">Project 1</span>
+                        <span class="project-chevron">&#9662;</span>
+                    </div>
+                    <div class="project-title">Computational Modeling of Cardiac Hypertrophy</div>
+                    <div class="project-body">
+                        <div class="project-body-inner">
+                            <span class="badge CSBG">Netflux</span>
+                            <span class="badge CSBG">Cytoscape</span>
+                            <ul>
+                                <li>Optimized large-scale signaling pathway models in the Hippo pathway by systematically tuning parameters and network topology using Netflux and Cytoscape.</li>
+                                <li>Evaluated Netflux model behavior and contributed documentation improvements based on user experience.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="project-card image" data-project="p-hypertrophy" aria-expanded="false">
+                    <div class="project-top">
+                        <span class="project-tag">THE TEAM & CELLS</span>
+                        <span class="project-chevron">&#9662;</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-body-lab-images">
+                            <img class="lab-img people" src="../img/IMG_5766.png">
+                            <p>Halloween costumes with lab. Decided to dress up as different sodas</p>
+                            <img class="lab-img Ctrl-Ab" src="../img/7d I-R_Image005.png">
+                            <p>Immunofluorescence image of a mouse myocardial infarct region, stained for PCNA (proliferation
+                                marker), PDGFRα (fibroblast marker), and DAPI (nuclei). Scale bar: 50 μm</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <div class="lab-block lab-2">
+            <div class="lab-header">
+                <h2><a href="https://engineering.virginia.edu/labs-groups/lampe-biomaterials-group" target="_blank">Lampe Biomaterials Group</a><span class="lab-link">&#8599;</span></h2>
+                <div class="lab-meta">Undergraduate Researcher <a href="https://engineering.virginia.edu/faculty/kyle-j-lampe" target="_blank">(PI: Kyle Lampe, Ph.D. &#8599;)</a></div>
+                <div class="lab-dates">August 2022 &ndash; August 2024 | Charlottesville, Virginia</div>
+            </div>
+            <div class="lab-bullets">
+                <span class="badge LBG">Peptide Synthesis</span>
+                <span class="badge LBG">Hydrogel Synthesis</span>
+                <span class="badge LBG">Cell Culture</span>
+                <span class="badge LBG">Rheometry</span>
+                <span class="badge LBG">Fiji [ImageJ]</span>
+                <span class="badge LBG">Microscopy</span>
+                <ul>
+                    <li>Synthesized and optimized 5 distinct peptide hydrogels, including KYFIL, under varying experimental
+                        conditions to mimic brain tissue stiffness for targeted treatments, such as stroke.</li>
+                    <li>Cultured oligodendrocyte progenitor cells under sterile conditions to evaluate cell viability
+                        within the synthesized hydrogels.</li>
+                    <li>Conducted rheological testing using an oscillatory rheometer to quantify hydrogel viscoelasticity
+                        and tune mechanical properties to match native brain ECM.</li>
+                    <li>Performed image-based morphological analyses to validate hydrogel structure, porosity, and
+                        consistency across formulations using microscopy techniques.</li>
+                </ul>
+            </div>
+            <button class="project-card hydrogel" data-project="p-hypertrophy" aria-expanded="false">
+                <div class="project-top">
+                    <span class="project-tag">HYDROGELS</span>
+                    <span class="project-chevron">&#9662;</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-body-lab-images hydrogel">
+                        <div class="hydrogel-grid">
+                            <img class="lab-img hydrogel" src="../img/8100X_3513.jpg">
+                            <img class="lab-img hydrogel" src="../img/10000X_3014.jpg">
+                            <img class="lab-img hydrogel" src="../img/10000X_3570.jpg">
+                            <img class="lab-img hydrogel" src="../img/43000X_3480.jpg">
+                        </div>
+                        <p>Microscopic structural view of different hydrogels</p>
+
+                        <div class="test-tube">
+                            <img class="lab-img test-tube" src="../img/IMG_5159.png">
+                            <img class="lab-img test-tube" src="../img/IMG_5165.png">
+                        </div>
+                        <p>Morphological appearance of the hydrogel in two distinct states</p>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <div class="lab-block lab-3">
+            <div class="lab-header">
+                <h2><a href="https://lab.vanderbilt.edu/mml/" target="_blank">Merryman Mechanobiology Laboratory</a><span class="lab-link">&#8599;</span></h2>
+                <div class="lab-school">Vanderbilt University</div>
+                <div class="lab-meta">Research Intern <a href="https://lab.vanderbilt.edu/mml/merryman/" target="_blank">(PI: David Merryman, Ph.D. &#8599;)</a></div>
+                <div class="lab-dates">June 2023 &ndash; August 2023 | Nashville, TN</div>
+            </div>
+            <div class="lab-bullets">
+                <span class="badge MML">Western Blot</span>
+                <span class="badge MML">qPCR</span>
+                <span class="badge MML">Mouse Dissection</span>
+                <ul>
+                    <li>Contributed to parallel studies on heart valve disease: one on serotonin's role in mitral regurgitation, the other on siRNA therapies targeting cadherin-11 in aortic stenosis.</li>
+                    <li>Performed Western blot, qPCR, and mouse anatomical dissection to investigate molecular mechanisms of valvular diseases, gaining practical insights into potential therapeutic targets.</li>
+                    <li>Presented research findings in a symposium to faculty, professionals, and students.</li>
+                </ul>
+            </div>
+
+            <button class="project-card vandy" data-project="p-hypertrophy" aria-expanded="false">
+                <div class="project-top">
+                    <span class="project-tag">PRESENTATION DAY</span>
+                    <span class="project-chevron">&#9662;</span>
+                </div>
+                <div class="project-title">Summer project symposium at Vanderbilt University</div>
+                <div class="project-body">
+                    <div class="project-body-lab-images vandy">
+                        <div class="vandy-grid">
+                            <img class="lab-img vandy" src="../img/IMG_0949.png">
+                            <p class="vandy-text">Picture with my research mentors</p>
+                            <img class="lab-img vandy" src="../img/IMG_1008.png">
+                            <p class="vandy-text">Picture with my friends from the summer program</p>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-nav">
+            <p><a href="portfolio-ML.html">NEXT TO ML PROJECT &#8594;</a></p>
+            <p class="prev"><a href="about.html">&#8592; PREVIOUS TO ABOUT</a></p>
+        </div>
+        <div class="copyright">&nbsp; &copy; 2026 GORDINA P. HODIBERT</div>
+    </div>
+
+</div>
+
+<script>
+    const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const body = card.querySelector('.project-body');
+        const isOpen = card.getAttribute('aria-expanded') === 'true';
+
+        card.setAttribute('aria-expanded', String(!isOpen));
+        body.classList.toggle('open', !isOpen);
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio-ML</title>
+
+    <link rel="stylesheet" href="../css/portfolio-ML.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<header>
+    <a href="main.html" class="acronym">GPH</a>
+    <nav>
+        <a href="main.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="main.html#portfolio-engineering">PORTFOLIO</a>
+        <a href="main.html#contact">CONTACT</a>
+    </nav>
+</header>
+
+
+<div class="ML">
+    <div class="ml-box">
+        <div class="title-group">
+            <h1>ML PROJECTS</h1>
+            <p id="subtitle">Early-stage machine learning work &mdash; built while learning the fundamentals</p>
+        </div>
+
+        <!-- ============ REPO 1: Regression / SRGAN ============ -->
+        <div class="repo-block repo-1">
+            <div class="repo-header">
+                <p class="repo-title-link">Image-Resolution<span class="repo-link-icon"></span></p>
+                <span class="repo-status"><span class="dot"></span>Public repo</span>
+                <p class="repo-desc">Model prediction across continuous numerical values instead of discrete class labels.
+                    Includes an implementation of SRGAN (Super-Resolution GAN) for upscaling low-resolution images.</p>
+                <div class="repo-stack">
+                    <span class="badge REG">SRGAN</span>
+                    <span class="badge lang">Python</span>
+                    <span class="badge lang">Jupyter Notebook</span>
+                    <span class="badge lang">PyTorch</span>
+                </div>
+            </div>
+
+            <div class="code-card">
+                <button class="code-card-toggle" aria-expanded="false" data-panel="panel-reg">
+                    <span class="file-tag">SRGAN</span>
+                    <span class="code-chevron">&#9662;</span>
+                </button>
+
+                <div class="code-panel" id="panel-reg">
+                    <div class="code-panel-inner">
+                        <div class="code-tabs">
+                            <button class="code-tab active"
+                                    data-src="https://raw.githubusercontent.com/gordhie04/Image-Resolution/main/SRGAN/Main_Code_SRGAN.py"
+                                    data-lang="python"
+                                    data-target="code-reg">Main_Code_SRGAN.py</button>
+                            <button class="code-tab"
+                                    data-src="https://raw.githubusercontent.com/gordhie04/Image-Resolution/main/SRGAN/SRGAN_Image.py"
+                                    data-lang="python"
+                                    data-target="code-reg">SRGAN_Image.py</button>
+                        </div>
+                        <div class="code-window">
+                            <div class="code-window-bar"><span></span><span></span><span></span></div>
+                            <div class="code-status" data-status-for="code-reg">Loading preview from GitHub&hellip;</div>
+                            <pre><code id="code-reg" class="language-python"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="repo-actions regression">
+                    <a href="https://github.com/gordhie04/Regression" target="_blank">View full repo &#8599;</a>
+                    <a href="https://github.com/gordhie04/Regression/tree/main/SRGAN" target="_blank">Browse SRGAN folder &#8599;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============ REPO 2: Classification ============ -->
+        <div class="repo-block repo-2">
+            <div class="repo-header">
+                <p class="repo-title-link" >Classification<span class="repo-link-icon"></span></p>
+                <span class="repo-status"><span class="dot"></span>Public repo</span>
+                <p class="repo-desc">A simple feedforward neural network for CIFAR10 image classification using PyTorch.</p>
+                <div class="repo-stack">
+                    <span class="badge CLS">Image Classification</span>
+                    <span class="badge CLS">Neural Network</span>
+                    <span class="badge lang">Python</span>
+                    <span class="badge lang">PyTorch</span>
+                </div>
+            </div>
+
+            <div class="code-card">
+                <button class="code-card-toggle" aria-expanded="false" data-panel="panel-cls">
+                    <span class="file-tag">CLASSIFIER</span>
+                    <span class="code-chevron">&#9662;</span>
+                </button>
+
+                <div class="code-panel" id="panel-cls">
+                    <div class="code-panel-inner">
+                        <div class="code-tabs">
+                            <button class="code-tab active"
+                                    data-src="https://raw.githubusercontent.com/gordhie04/Classification/main/CIFAR-10_ResNetX/CIFAR-10_ResNetX_GPU.py"
+                                    data-lang="python"
+                                    data-target="code-cls">CIFAR-10_ResNetX_GPU.py
+                            </button>
+                            <button class="code-tab"
+                                    data-src="https://raw.githubusercontent.com/gordhie04/Classification/main/CIFAR-10_SimpleANN/cifar10_classifier.py"
+                                    data-lang="python"
+                                    data-target="code-cls">CIFAR-10_SimpleANN.py
+                            </button>
+                            <button class="code-tab"
+                                    data-src="https://raw.githubusercontent.com/gordhie04/Classification/main/IRIS_Classifier/iris_classifier.py"
+                                    data-lang="python"
+                                    data-target="code-cls">IRIS_Classifier.py
+                            </button>
+                        </div>
+                        <div class="code-window">
+                            <div class="code-window-bar"><span></span><span></span><span></span></div>
+                            <div class="code-status" data-status-for="code-cls">Loading preview from GitHub&hellip;</div>
+                            <pre><code id="code-cls" class="language-python"></code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="repo-actions classification">
+                    <a href="https://github.com/gordhie04/Classification" target="_blank">View full repo &#8599;</a>
+                    <a href="https://github.com/gordhie04/Classification/tree/main/CIFAR-10_ResNetX" target="_blank">CIFAR-10_ResNetX folder &#8599;</a>
+                    <a href="https://github.com/gordhie04/Classification/tree/main/CIFAR-10_SimpleANN" target="_blank">CIFAR-10_SimpleANN folder &#8599;</a>
+                    <a href="https://github.com/gordhie04/Classification/tree/main/IRIS_Classifier" target="_blank">IRIS_Classifier folder &#8599;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <p><a href="portfolio-E.html">&#8592; PREVIOUS TO ENGINEERING RESEARCH</a></p>
+        <div class="copyright">&nbsp; &copy; 2026 GORDINA P. HODIBERT</div>
+    </div>
+</div>
+
+
+<script>
+    // ---- expand / collapse code cards ----
+    document.querySelectorAll('.code-card-toggle').forEach(toggleBtn => {
+        toggleBtn.addEventListener('click', () => {
+            const panel = document.getElementById(toggleBtn.dataset.panel);
+            const isOpen = toggleBtn.getAttribute('aria-expanded') === 'true';
+            toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+            panel.classList.toggle('open', !isOpen);
+
+            // lazy-load the active tab's code the first time this card opens
+            if (!isOpen) {
+                const activeTab = panel.querySelector('.code-tab.active');
+                if (activeTab && !activeTab.dataset.loaded) {
+                    loadCode(activeTab);
+                }
+            }
+        });
+    });
+
+    // ---- tab switching within a code card ----
+    document.querySelectorAll('.code-tabs').forEach(tabGroup => {
+        tabGroup.querySelectorAll('.code-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabGroup.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                loadCode(tab);
+            });
+        });
+    });
+
+    // ---- fetch raw file straight from GitHub and syntax-highlight it ----
+    async function loadCode(tabEl) {
+        const targetId = tabEl.dataset.target;
+        const codeEl = document.getElementById(targetId);
+        const statusEl = document.querySelector('[data-status-for="' + targetId + '"]');
+
+        codeEl.parentElement.style.display = 'none';
+        statusEl.style.display = 'block';
+        statusEl.textContent = 'Loading preview from GitHub…';
+
+        try {
+            const res = await fetch(tabEl.dataset.src);
+            if (!res.ok) throw new Error('Request failed: ' + res.status);
+            const text = await res.text();
+
+            codeEl.textContent = text;
+            codeEl.className = 'language-' + (tabEl.dataset.lang || 'plaintext');
+            if (window.hljs) hljs.highlightElement(codeEl);
+
+            tabEl.dataset.loaded = 'true';
+            statusEl.style.display = 'none';
+            codeEl.parentElement.style.display = 'block';
+        } catch (err) {
+            statusEl.textContent = "Couldn't load a live preview — use \"View full repo\" below to see the code on GitHub.";
+        }
+    }
+</script>
+
+
+</body>
+</html>
