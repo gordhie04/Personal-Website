@@ -221,8 +221,10 @@ header nav a:hover{
     margin-top: 12px;
 }
 
-.project-body-inner{
+.project-body-inner,
+.project-body-lab-images{
     overflow: hidden;
+    min-height: 0;
 }
 
 .project-body-lab-images{
@@ -306,30 +308,6 @@ header nav a:hover{
 .lab-2{ border-left-color: orange; }
 .lab-3{ border-left-color: #7496ed; }
 
-
-
-/*.footer{*/
-/*    border: solid 3px black;*/
-/*    margin-bottom: 30px;*/
-/*    border-left: none;*/
-/*    border-right: none;*/
-/*}*/
-
-/*.footer p{*/
-/*    display: inline-block;*/
-/*    font-size: 14px;*/
-/*    font-weight: bold;*/
-/*    padding: 2rem 0rem 2rem 4.5rem;*/
-/*}*/
-
-/*.footer a{*/
-/*    color: inherit;*/
-/*    text-decoration: none;*/
-/*}*/
-
-/*.footer a:hover{*/
-/*    color: #bc0707;*/
-/*}*/
 
 .footer-nav{
     display: flex;
